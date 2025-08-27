@@ -25,10 +25,12 @@ export default function Home() {
     })
     const result = await response.json()
     const messageDiv = document.getElementById('message')
-    if (result.success) {
-      messageDiv.innerHTML = '<p style="color: green;">User added successfully!</p>'
-    } else {
-      messageDiv.innerHTML = '<p style="color: red;">Error: ' + result.error + '</p>'
+    if(messageDiv){
+      if (result.success) {
+        messageDiv.innerHTML = '<p style="color: green;">User added successfully!</p>'
+      } else {
+        messageDiv.innerHTML = '<p style="color: red;">Error: ' + result.error + '</p>'
+      }
     }
   }
   return (
