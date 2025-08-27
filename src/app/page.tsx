@@ -5,7 +5,7 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')  
   const [interests, setInterests] = useState('')
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()  // Stops normal form submission
     // Convert comma-separated interests to array
     const interestsArray = interests.split(',').map(item => item.trim())
